@@ -1,0 +1,25 @@
+{
+  "name": "serveless-aws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "Alex Ramos Ipanaque",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^29.6.4",
+    "serverless-offline": "^11.1.1"
+  },
+  "dependencies": {
+    "@middy/core": "^4.6.1",
+    "@vitalets/google-translate-api": "^8.0.0",
+    "aws-sdk": "^2.1451.0",
+    "axios": "^1.1.2",
+    "request": "^2.88.2",
+    "uuid": "^9.0.0"
+  }
+}

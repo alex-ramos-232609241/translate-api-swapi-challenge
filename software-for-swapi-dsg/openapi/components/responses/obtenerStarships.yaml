@@ -1,0 +1,75 @@
+description: Obtener Startships
+content:
+  application/json:
+    schema:
+      type: object
+      description: obtener starships con cabecera traducida
+      properties:
+        payload:
+          type: object
+          description: objeto starships con cabecera traducida
+    
+    examples:
+      Caso-Prueba-01:
+        summary: Caso de exito
+        value:
+          payload:
+            datos:
+              - nombre: CR90 corvette
+                modelo: Corellian Engineering Corporation
+                fabricante: 3500000
+                cost_in_credits: 150
+                longitud: 950
+                max_atmosfering_speed: 30-165
+                tripulación: 600
+                pasajeros: 3000000
+                Cargo_Capacity: 1 year
+                Consumibles: 2.0
+                Hyperdrive_Rating: 60
+                MGLT: corvette
+                Starship_class: 
+                pilotos: 
+                  - https://swapi.py4e.com/api/films/1/
+                  - https://swapi.py4e.com/api/films/3/
+                  - https://swapi.py4e.com/api/films/6/
+                películas: 2014-12-10T14:20:33.369000Z
+                creado: 2014-12-20T21:23:49.867000Z
+                editado: https://swapi.py4e.com/api/starships/2/
+              - nombre: Imperial I-class Star Destroyer
+                modelo: Kuat Drive Yards
+                fabricante: 150000000
+                cost_in_credits: 1600
+                longitud: 975
+                max_atmosfering_speed: 47060
+                tripulación: n/a
+                pasajeros: 36000000
+                Cargo_Capacity: 2 years
+                Consumibles: 2.0
+                Hyperdrive_Rating: 60
+                MGLT: Star Destroyer
+                Starship_class: 
+                pilotos: 
+                  - https://swapi.py4e.com/api/films/1/
+                  - https://swapi.py4e.com/api/films/2/
+                  - https://swapi.py4e.com/api/films/3/
+                películas: 2014-12-10T15:08:19.848000Z
+                creado: 2014-12-20T21:23:49.870000Z
+                editado: https://swapi.py4e.com/api/starships/3/
+              - nombre: Sentinel-class landing craft
+                modelo: Sienar Fleet Systems Cyngus Spaceworks
+                fabricante: 240000
+                cost_in_credits: 38
+                longitud: 1000
+                max_atmosfering_speed: 5
+                tripulación: 75
+                pasajeros: 180000
+                Cargo_Capacity: 1 month
+                Consumibles: 1.0
+                Hyperdrive_Rating: 70
+                MGLT: landing craft
+                Starship_class: 
+                pilotos: https://swapi.py4e.com/api/films/1/
+                películas: 2014-12-10T15:48:00.586000Z
+                creado: 2014-12-20T21:23:49.873000Z
+                editado: https://swapi.py4e.com/api/starships/5/
+                

@@ -1,0 +1,72 @@
+description: Obtener Vehicles
+content:
+  application/json:
+    schema:
+      type: object
+      description: obtener vehicles con cabecera traducida
+      properties:
+        payload:
+          type: object
+          description: objeto vehicles con cabecera traducida
+    
+    examples:
+      Caso-Prueba-01:
+        summary: Caso de exito
+        value:
+          payload:
+            datos:
+                - nombre: Sand Crawler
+                  modelo: Digger Crawler
+                  fabricante: Corellia Mining Corporation
+                  cost_in_credits: 150000
+                  longitud: 36.8 
+                  max_atmosfering_speed: 30
+                  tripulación: 46
+                  pasajeros: 30
+                  carga_capacidad: 50000
+                  consumibles: 2 months
+                  vehículos_class: wheeled
+                  pilotos: 
+                  películas: 
+                   - https://swapi.py4e.com/api/films/1/
+                   - https://swapi.py4e.com/api/films/5/
+                  
+                  creado: 2014-12-10T15:36:25.724000Z
+                  editado: 2014-12-20T21:30:21.661000Z
+                  URL: https://swapi.py4e.com/api/vehicles/4/
+                
+                
+                - nombre: T-16 skyhopper
+                  modelo: T-16 skyhopper
+                  fabricante: Incom Corporation
+                  cost_in_credits: 14500
+                  longitud: 10.4 
+                  max_atmosfering_speed: 1200
+                  tripulación: 1
+                  pasajeros: 1
+                  carga_capacidad: 50
+                  consumibles: 0
+                  vehículos_class: repulsorcraft
+                  pilotos: 
+                  películas: 
+                    https://swapi.py4e.com/api/films/1/
+                  creado: 2014-12-10T16:01:52.434000Z
+                  editado: 2014-12-20T21:30:21.665000Z
+                  URL: https://swapi.py4e.com/api/vehicles/6/
+                
+                - nombre: X-34 landspeeder
+                  modelo: X-34 landspeeder
+                  fabricante: SoroSuub Corporation
+                  cost_in_credits: 10550
+                  longitud: 3.4 
+                  max_atmosfering_speed: 250
+                  tripulación: 1
+                  pasajeros: 1
+                  carga_capacidad: 5
+                  consumibles: unknown
+                  vehículos_class: repulsorcraft
+                  pilotos: 
+                  películas: https://swapi.py4e.com/api/films/1/
+                  creado: 2014-12-10T16:13:52.586000Z
+                  editado: 2014-12-20T21:30:21.668000Z
+                  URL: https://swapi.py4e.com/api/vehicles/7/

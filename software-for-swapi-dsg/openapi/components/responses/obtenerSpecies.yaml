@@ -1,0 +1,125 @@
+description: Obtener Species
+content:
+  application/json:
+    schema:
+      type: object
+      description: obtener species con cabecera traducida
+      properties:
+        payload:
+          type: object
+          description: objeto species con cabecera traducida
+    
+    examples:
+      Caso-Prueba-01:
+        summary: Caso de exito
+        value:
+          payload:
+            datos:
+            - nombre: Human
+              clasificación: mammal
+              designación: sentient
+              promedio_height: 180
+              skin_colors: caucasian black asian hispanic
+              Hair_Colors: blonde brown black red
+              Eye_Colors: brown blue green hazel grey amber
+              promedio_lifespan: 120
+              mundo doméstico: https://swapi.py4e.com/api/planets/9/
+              lenguaje: Galactic Basic
+              personas: 
+                - https://swapi.py4e.com/api/people/1/
+                - https://swapi.py4e.com/api/people/4/
+                - https://swapi.py4e.com/api/people/5/
+                - https://swapi.py4e.com/api/people/6/
+                - https://swapi.py4e.com/api/people/7/
+                - https://swapi.py4e.com/api/people/9/
+                - https://swapi.py4e.com/api/people/10/
+                - https://swapi.py4e.com/api/people/11/
+                - https://swapi.py4e.com/api/people/12/
+                - https://swapi.py4e.com/api/people/14/
+                - https://swapi.py4e.com/api/people/18/
+                - https://swapi.py4e.com/api/people/21/
+                - https://swapi.py4e.com/api/people/22/
+                - https://swapi.py4e.com/api/people/25/
+                - https://swapi.py4e.com/api/people/26/
+                - https://swapi.py4e.com/api/people/28/
+                - https://swapi.py4e.com/api/people/29/
+                - https://swapi.py4e.com/api/people/32/
+                - https://swapi.py4e.com/api/people/34/
+                - https://swapi.py4e.com/api/people/35/
+                - https://swapi.py4e.com/api/people/39/
+                - https://swapi.py4e.com/api/people/42/
+                - https://swapi.py4e.com/api/people/43/
+                - https://swapi.py4e.com/api/people/51/
+                - https://swapi.py4e.com/api/people/62/
+                - https://swapi.py4e.com/api/people/66/
+                - https://swapi.py4e.com/api/people/67/
+                - https://swapi.py4e.com/api/people/68/
+                - https://swapi.py4e.com/api/people/69/
+                - https://swapi.py4e.com/api/people/74/
+                - https://swapi.py4e.com/api/people/81/
+                - https://swapi.py4e.com/api/people/84/
+                - https://swapi.py4e.com/api/people/85/
+                - https://swapi.py4e.com/api/people/86/
+                - https://swapi.py4e.com/api/people/88/
+              películas: 
+                - https://swapi.py4e.com/api/films/1/
+                - https://swapi.py4e.com/api/films/2/
+                - https://swapi.py4e.com/api/films/3/
+                - https://swapi.py4e.com/api/films/4/
+                - https://swapi.py4e.com/api/films/5/
+                - https://swapi.py4e.com/api/films/6/
+                - https://swapi.py4e.com/api/films/7/
+              creado: 2014-12-10T13:52:11.567000Z
+              editado: 2014-12-20T21:36:42.136000Z
+              URL: https://swapi.py4e.com/api/species/1/
+            - nombre: Droid
+              clasificación: artificial
+              designación: sentient
+              promedio_height: n/a
+              skin_colors: n/a
+              Hair_Colors: n/a
+              Eye_Colors: n/a
+              promedio_lifespan: indefinite
+              mundo doméstico: null
+              lenguaje: n/a
+              personas: 
+                - https://swapi.py4e.com/api/people/2/
+                - https://swapi.py4e.com/api/people/3/
+                - https://swapi.py4e.com/api/people/8/
+                - https://swapi.py4e.com/api/people/23/
+                - https://swapi.py4e.com/api/people/87/
+              películas: 
+                - https://swapi.py4e.com/api/films/1/
+                - https://swapi.py4e.com/api/films/2/
+                - https://swapi.py4e.com/api/films/3/
+                - https://swapi.py4e.com/api/films/4/
+                - https://swapi.py4e.com/api/films/5/
+                - https://swapi.py4e.com/api/films/6/
+                - https://swapi.py4e.com/api/films/7/
+              creado: 2014-12-10T15:16:16.259000Z
+              editado: 2014-12-20T21:36:42.139000Z
+              URL: https://swapi.py4e.com/api/species/2/
+            
+            
+            - nombre: Wookiee
+              clasificación: mammal
+              designación: sentient
+              promedio_height: 210
+              skin_colors: gray
+              Hair_Colors: black brown
+              Eye_Colors: blue green yellow brown golden red
+              promedio_lifespan: 400
+              mundo doméstico: https://swapi.py4e.com/api/planets/14/
+              lenguaje: Shyriiwook
+              personas: 
+                - https://swapi.py4e.com/api/people/13/
+                - https://swapi.py4e.com/api/people/80/
+              películas: 
+                - https://swapi.py4e.com/api/films/1/
+                - https://swapi.py4e.com/api/films/2/
+                - https://swapi.py4e.com/api/films/3/
+                - https://swapi.py4e.com/api/films/6/
+                - https://swapi.py4e.com/api/films/7/
+              creado: 2014-12-10T16:44:31.486000Z
+              editado: 2014-12-20T21:36:42.142000Z
+              URL: https://swapi.py4e.com/api/species/3/

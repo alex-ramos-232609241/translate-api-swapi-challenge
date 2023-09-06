@@ -1,0 +1,13 @@
+parameters:
+  - name: dateTime
+
+get:
+  tags:
+    - TRANSLATE SWAPI
+  
+  summary: Listar planets con cabecera traducida.
+  description:  Endpoint te permite listar los planets con cabecera en español.
+  responses:
+    '200':
+      $ref: ../components/responses/obtenerPlanets.yaml  
+   

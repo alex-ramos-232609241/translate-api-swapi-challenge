@@ -1,0 +1,12 @@
+apis:
+  main@v1:
+    root: ./openapi/openapi.yaml
+lint:
+  rules:
+    no-unused-schemas: warning
+features.openapi:
+  htmlTemplate: ./docs/index.html
+  theme:
+    colors:
+      primary:
+        main: "#ff00ff"

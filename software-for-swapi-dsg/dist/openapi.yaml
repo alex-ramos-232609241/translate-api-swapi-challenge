@@ -1,0 +1,667 @@
+openapi: 3.0.1
+info:
+  title: Traductor Swapi DSG
+  contact:
+    name: Alex Ramos Ipanaque
+tags:
+  - name: TRANSLATE SWAPI
+    description: Rutas para obtener la api swapi traducida.
+  - name: CONECCTION OF DYNAMODB
+    description: Rutas para obtener acceso a dynamoDb
+paths:
+  /dev/people/:
+    parameters:
+      - name: dateTime
+    get:
+      tags:
+        - TRANSLATE SWAPI
+      summary: Listar personas con cabecera traducida.
+      description: Endpoint te permite listar las personas con cabecera en español.
+      responses:
+        '200':
+          $ref: '#/components/responses/obtenerPeople'
+  /dev/planets/:
+    parameters:
+      - name: dateTime
+    get:
+      tags:
+        - TRANSLATE SWAPI
+      summary: Listar planets con cabecera traducida.
+      description: Endpoint te permite listar los planets con cabecera en español.
+      responses:
+        '200':
+          $ref: '#/components/responses/obtenerPlanets'
+  /dev/films/:
+    parameters:
+      - name: dateTime
+    get:
+      tags:
+        - TRANSLATE SWAPI
+      summary: Listar films con cabecera traducida.
+      description: Endpoint te permite listar las films con cabecera en español.
+      responses:
+        '200':
+          $ref: '#/components/responses/obtenerFilms'
+  /dev/species/:
+    parameters:
+      - name: dateTime
+    get:
+      tags:
+        - TRANSLATE SWAPI
+      summary: Listar species con cabecera traducida.
+      description: Endpoint te permite listar las species con cabecera en español.
+      responses:
+        '200':
+          $ref: '#/components/responses/obtenerSpecies'
+  /dev/vehicles/:
+    parameters:
+      - name: dateTime
+    get:
+      tags:
+        - TRANSLATE SWAPI
+      summary: Listar vehicles con cabecera traducida.
+      description: Endpoint te permite listar las vehicles con cabecera en español.
+      responses:
+        '200':
+          $ref: '#/components/responses/obtenerVehicles'
+  /dev/starships/:
+    parameters:
+      - name: dateTime
+    get:
+      tags:
+        - TRANSLATE SWAPI
+      summary: Listar starships con cabecera traducida.
+      description: Endpoint te permite listar las starships con cabecera en español.
+      responses:
+        '200':
+          $ref: '#/components/responses/obtenerStarships'
+components:
+  responses:
+    obtenerPeople:
+      description: Obtener People
+      content:
+        application/json:
+          schema:
+            type: object
+            description: obtener people con cabecera traducida
+            properties:
+              payload:
+                type: object
+                description: objeto people con cabecera traducida
+          examples:
+            Caso-Prueba-01:
+              summary: Caso de exito
+              value:
+                payload:
+                  datos:
+                    - nombre: Luke Skywalker
+                      altura: 172
+                      masa: 77
+                      Hair_color: blond
+                      skin_color: fair
+                      eye_color: blue
+                      birth_year: 19BBY
+                      género: male
+                      mundo doméstico: https://swapi.py4e.com/api/planets/1/
+                      películas:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/2/
+                        - https://swapi.py4e.com/api/films/3/
+                        - https://swapi.py4e.com/api/films/6/
+                        - https://swapi.py4e.com/api/films/7/
+                      especies: https://swapi.py4e.com/api/species/1/
+                      vehículos:
+                        - https://swapi.py4e.com/api/vehicles/14/
+                        - https://swapi.py4e.com/api/vehicles/30/
+                      naves espaciales:
+                        - https://swapi.py4e.com/api/starships/12/
+                        - https://swapi.py4e.com/api/starships/22/
+                      creado: '2014-12-09T13:50:51.644000Z'
+                      editado: '2014-12-20T21:17:56.891000Z'
+                      URL: https://swapi.py4e.com/api/people/1/
+                    - nombre: C-3PO
+                      altura: 167
+                      masa: 75
+                      Hair_color: n/a
+                      skin_color: gold
+                      eye_color: yellow
+                      birth_year: 112BBY
+                      género: n/a
+                      mundo doméstico: https://swapi.py4e.com/api/planets/1/
+                      películas:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/2/
+                        - https://swapi.py4e.com/api/films/3/
+                        - https://swapi.py4e.com/api/films/4/
+                        - https://swapi.py4e.com/api/films/5/
+                        - https://swapi.py4e.com/api/films/6/
+                      especies: https://swapi.py4e.com/api/species/2/
+                      vehículos: null
+                      naves espaciales: null
+                      creado: '2014-12-10T15:10:51.357000Z'
+                      editado: '2014-12-20T21:17:50.309000Z'
+                      URL: https://swapi.py4e.com/api/people/2/
+                    - nombre: R2-D2
+                      altura: 96
+                      masa: 32
+                      Hair_color: n/a
+                      skin_color: white blue
+                      eye_color: red
+                      birth_year: 33BBY
+                      género: n/a
+                      mundo doméstico: https://swapi.py4e.com/api/planets/8/
+                      películas:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/2/
+                        - https://swapi.py4e.com/api/films/3/
+                        - https://swapi.py4e.com/api/films/4/
+                        - https://swapi.py4e.com/api/films/5/
+                        - https://swapi.py4e.com/api/films/6/
+                        - https://swapi.py4e.com/api/films/7/
+                      especies: https://swapi.py4e.com/api/species/2/
+                      vehículos: null
+                      naves espaciales: null
+                      creado: '2014-12-10T15:11:50.376000Z'
+                      editado: '2014-12-20T21:17:50.311000Z'
+                      URL: https://swapi.py4e.com/api/people/3/
+    obtenerPlanets:
+      description: Obtener Planets
+      content:
+        application/json:
+          schema:
+            type: object
+            description: obtener planets con cabecera traducida
+            properties:
+              payload:
+                type: object
+                description: objeto planets con cabecera traducida
+          examples:
+            Caso-Prueba-01:
+              summary: Caso de exito
+              value:
+                payload:
+                  datos:
+                    - nombre: Tatooine
+                      rotación_period: 23
+                      orbital_period: 304
+                      diámetro: 10465
+                      clima: arid
+                      gravedad: 1 standard
+                      terreno: desert
+                      superficie_water: 1
+                      población: 200000
+                      residentes:
+                        - https://swapi.py4e.com/api/people/1/
+                        - https://swapi.py4e.com/api/people/2/
+                        - https://swapi.py4e.com/api/people/4/
+                        - https://swapi.py4e.com/api/people/6/
+                        - https://swapi.py4e.com/api/people/7/
+                        - https://swapi.py4e.com/api/people/8/
+                        - https://swapi.py4e.com/api/people/9/
+                        - https://swapi.py4e.com/api/people/11/
+                        - https://swapi.py4e.com/api/people/43/
+                        - https://swapi.py4e.com/api/people/62/
+                      películas:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/3/
+                        - https://swapi.py4e.com/api/films/4/
+                        - https://swapi.py4e.com/api/films/5/
+                        - https://swapi.py4e.com/api/films/6/
+                      creado: '2014-12-09T13:50:49.641000Z'
+                      editado: '2014-12-20T20:58:18.411000Z'
+                      URL: https://swapi.py4e.com/api/planets/1/
+                    - nombre: Alderaan
+                      rotación_period: 24
+                      orbital_period: 364
+                      diámetro: 12500
+                      clima: temperate
+                      gravedad: 1 standard
+                      terreno: grasslands mountains
+                      superficie_water: 40
+                      población: 2000000000
+                      residentes:
+                        - https://swapi.py4e.com/api/people/5/
+                        - https://swapi.py4e.com/api/people/68/
+                        - https://swapi.py4e.com/api/people/81/
+                      películas:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/6/
+                      creado: '2014-12-10T11:35:48.479000Z'
+                      editado: '2014-12-20T20:58:18.420000Z'
+                      URL: https://swapi.py4e.com/api/planets/2/
+                    - nombre: Yavin IV
+                      rotación_period: 24
+                      orbital_period: 4818
+                      diámetro: 10200
+                      clima: temperate tropical
+                      gravedad: 1 standard
+                      terreno: jungle rainforests
+                      superficie_water: 8
+                      población: 1000
+                      residentes: null
+                      creado: '2014-12-10T11:37:19.144000Z'
+                      editado: '2014-12-20T20:58:18.421000Z'
+                      URL: https://swapi.py4e.com/api/planets/3/
+                    - nombre: Hoth
+                      rotación_period: 23
+                      orbital_period: 549
+                      diámetro: 7200
+                      clima: frozen
+                      gravedad: 1.1 standard
+                      terreno: tundra ice caves mountain ranges
+                      superficie_water: 100
+                      población: unknown
+                      residentes: null
+                      películas: https://swapi.py4e.com/api/films/2/
+                      creado: '2014-12-10T11:39:13.934000Z'
+                      editado: '2014-12-20T20:58:18.423000Z'
+                      URL: https://swapi.py4e.com/api/planets/4/
+    obtenerFilms:
+      description: Obtener Films
+      content:
+        application/json:
+          schema:
+            type: object
+            description: obtener films con cabecera traducida
+            properties:
+              payload:
+                type: object
+                description: objeto films con cabecera traducida
+          examples:
+            Caso-Prueba-01:
+              summary: Caso de exito
+              value:
+                payload:
+                  datos:
+                    - título: A New Hope
+                      episodio_id: 4
+                      apertura_crawl: >-
+                        It is a period of civil war.\r\nRebel spaceships
+                        striking\r\nfrom a hidden base have won\r\ntheir first
+                        victory against\r\nthe evil Galactic
+                        Empire.\r\n\r\nDuring the battle Rebel\r\nspies managed
+                        to steal secret\r\nplans to the Empire's\r\nultimate
+                        weapon the DEATH\r\nSTAR an armored space\r\nstation
+                        with enough power\r\nto destroy an entire
+                        planet.\r\n\r\nPursued by the Empire's\r\nsinister
+                        agents Princess\r\nLeia races home aboard
+                        her\r\nstarship custodian of the\r\nstolen plans that
+                        can save her\r\npeople and restore\r\nfreedom to the
+                        galaxy....
+                      director: George Lucas
+                      productor: Gary Kurtz Rick McCallum
+                      lanzamiento_date: '1977-05-25'
+                      personajes:
+                        - https://swapi.py4e.com/api/people/1/
+                        - https://swapi.py4e.com/api/people/2/
+                        - https://swapi.py4e.com/api/people/3/
+                        - https://swapi.py4e.com/api/people/4/
+                        - https://swapi.py4e.com/api/people/5/
+                        - https://swapi.py4e.com/api/people/6/
+                        - https://swapi.py4e.com/api/people/7/
+                        - https://swapi.py4e.com/api/people/8/
+                        - https://swapi.py4e.com/api/people/9/
+                        - https://swapi.py4e.com/api/people/10/
+                        - https://swapi.py4e.com/api/people/12/
+                        - https://swapi.py4e.com/api/people/13/
+                        - https://swapi.py4e.com/api/people/14/
+                        - https://swapi.py4e.com/api/people/15/
+                        - https://swapi.py4e.com/api/people/16/
+                        - https://swapi.py4e.com/api/people/18/
+                        - https://swapi.py4e.com/api/people/19/
+                        - https://swapi.py4e.com/api/people/81/
+                      planetas:
+                        - https://swapi.py4e.com/api/planets/1/
+                        - https://swapi.py4e.com/api/planets/2/
+                        - https://swapi.py4e.com/api/planets/3/
+                      naves espaciales:
+                        - https://swapi.py4e.com/api/starships/2/
+                        - https://swapi.py4e.com/api/starships/3/
+                        - https://swapi.py4e.com/api/starships/5/
+                        - https://swapi.py4e.com/api/starships/9/
+                        - https://swapi.py4e.com/api/starships/10/
+                        - https://swapi.py4e.com/api/starships/11/
+                        - https://swapi.py4e.com/api/starships/12/
+                        - https://swapi.py4e.com/api/starships/13/
+                      vehículos:
+                        - https://swapi.py4e.com/api/vehicles/4/
+                        - https://swapi.py4e.com/api/vehicles/6/
+                        - https://swapi.py4e.com/api/vehicles/7/
+                        - https://swapi.py4e.com/api/vehicles/8/
+                      especies:
+                        - https://swapi.py4e.com/api/species/1/
+                        - https://swapi.py4e.com/api/species/2/
+                        - https://swapi.py4e.com/api/species/3/
+                        - https://swapi.py4e.com/api/species/4/
+                        - https://swapi.py4e.com/api/species/5/
+                      creado: '2014-12-10T14:23:31.880000Z'
+                      editado: '2014-12-20T19:49:45.256000Z'
+                    - título: The Empire Strikes Back
+                      episodio_id: 5
+                      apertura_crawl: >-
+                        It is a dark time for the\r\nRebellion. Although the
+                        Death\r\nStar has been destroyed\r\nImperial troops have
+                        driven the\r\nRebel forces from their hidden\r\nbase and
+                        pursued them across\r\nthe galaxy.\r\n\r\nEvading the
+                        dreaded Imperial\r\nStarfleet a group of
+                        freedom\r\nfighters led by Luke Skywalker\r\nhas
+                        established a new secret\r\nbase on the remote ice
+                        world\r\nof Hoth.\r\n\r\nThe evil lord Darth
+                        Vader\r\nobsessed with finding young\r\nSkywalker has
+                        dispatched\r\nthousands of remote probes into\r\nthe far
+                        reaches of space....
+                      director: Irvin Kershner
+                      productor: Gary Kurtz Rick McCallum
+                      lanzamiento_date: '1980-05-17'
+                      personajes:
+                        - https://swapi.py4e.com/api/people/1/
+                        - https://swapi.py4e.com/api/people/2/
+                        - https://swapi.py4e.com/api/people/3/
+                        - https://swapi.py4e.com/api/people/4/
+                        - https://swapi.py4e.com/api/people/5/
+                        - https://swapi.py4e.com/api/people/10/
+                        - https://swapi.py4e.com/api/people/13/
+                        - https://swapi.py4e.com/api/people/14/
+                        - https://swapi.py4e.com/api/people/18/
+                        - https://swapi.py4e.com/api/people/20/
+                        - https://swapi.py4e.com/api/people/21/
+                        - https://swapi.py4e.com/api/people/22/
+                        - https://swapi.py4e.com/api/people/23/
+                        - https://swapi.py4e.com/api/people/24/
+                        - https://swapi.py4e.com/api/people/25/
+                        - https://swapi.py4e.com/api/people/26/
+                      planetas:
+                        - https://swapi.py4e.com/api/planets/4/
+                        - https://swapi.py4e.com/api/planets/5/
+                        - https://swapi.py4e.com/api/planets/6/
+                        - https://swapi.py4e.com/api/planets/27/
+                      naves espaciales:
+                        - https://swapi.py4e.com/api/starships/3/
+                        - https://swapi.py4e.com/api/starships/10/
+                        - https://swapi.py4e.com/api/starships/11/
+                        - https://swapi.py4e.com/api/starships/12/
+                        - https://swapi.py4e.com/api/starships/15/
+                        - https://swapi.py4e.com/api/starships/17/
+                        - https://swapi.py4e.com/api/starships/21/
+                        - https://swapi.py4e.com/api/starships/22/
+                        - https://swapi.py4e.com/api/starships/23/
+                      vehículos:
+                        - https://swapi.py4e.com/api/vehicles/8/
+                        - https://swapi.py4e.com/api/vehicles/14/
+                        - https://swapi.py4e.com/api/vehicles/16/
+                        - https://swapi.py4e.com/api/vehicles/18/
+                        - https://swapi.py4e.com/api/vehicles/19/
+                        - https://swapi.py4e.com/api/vehicles/20/
+                      especies:
+                        - https://swapi.py4e.com/api/species/1/
+                        - https://swapi.py4e.com/api/species/2/
+                        - https://swapi.py4e.com/api/species/3/
+                        - https://swapi.py4e.com/api/species/6/
+                        - https://swapi.py4e.com/api/species/7/
+                      creado: '2014-12-12T11:26:24.656000Z'
+                      editado: '2014-12-15T13:07:53.386000Z'
+                      URL: https://swapi.py4e.com/api/films/2/
+    obtenerSpecies:
+      description: Obtener Species
+      content:
+        application/json:
+          schema:
+            type: object
+            description: obtener species con cabecera traducida
+            properties:
+              payload:
+                type: object
+                description: objeto species con cabecera traducida
+          examples:
+            Caso-Prueba-01:
+              summary: Caso de exito
+              value:
+                payload:
+                  datos:
+                    - nombre: Human
+                      clasificación: mammal
+                      designación: sentient
+                      promedio_height: 180
+                      skin_colors: caucasian black asian hispanic
+                      Hair_Colors: blonde brown black red
+                      Eye_Colors: brown blue green hazel grey amber
+                      promedio_lifespan: 120
+                      mundo doméstico: https://swapi.py4e.com/api/planets/9/
+                      lenguaje: Galactic Basic
+                      personas:
+                        - https://swapi.py4e.com/api/people/1/
+                        - https://swapi.py4e.com/api/people/4/
+                        - https://swapi.py4e.com/api/people/5/
+                        - https://swapi.py4e.com/api/people/6/
+                        - https://swapi.py4e.com/api/people/7/
+                        - https://swapi.py4e.com/api/people/9/
+                        - https://swapi.py4e.com/api/people/10/
+                        - https://swapi.py4e.com/api/people/11/
+                        - https://swapi.py4e.com/api/people/12/
+                        - https://swapi.py4e.com/api/people/14/
+                        - https://swapi.py4e.com/api/people/18/
+                        - https://swapi.py4e.com/api/people/21/
+                        - https://swapi.py4e.com/api/people/22/
+                        - https://swapi.py4e.com/api/people/25/
+                        - https://swapi.py4e.com/api/people/26/
+                        - https://swapi.py4e.com/api/people/28/
+                        - https://swapi.py4e.com/api/people/29/
+                        - https://swapi.py4e.com/api/people/32/
+                        - https://swapi.py4e.com/api/people/34/
+                        - https://swapi.py4e.com/api/people/35/
+                        - https://swapi.py4e.com/api/people/39/
+                        - https://swapi.py4e.com/api/people/42/
+                        - https://swapi.py4e.com/api/people/43/
+                        - https://swapi.py4e.com/api/people/51/
+                        - https://swapi.py4e.com/api/people/62/
+                        - https://swapi.py4e.com/api/people/66/
+                        - https://swapi.py4e.com/api/people/67/
+                        - https://swapi.py4e.com/api/people/68/
+                        - https://swapi.py4e.com/api/people/69/
+                        - https://swapi.py4e.com/api/people/74/
+                        - https://swapi.py4e.com/api/people/81/
+                        - https://swapi.py4e.com/api/people/84/
+                        - https://swapi.py4e.com/api/people/85/
+                        - https://swapi.py4e.com/api/people/86/
+                        - https://swapi.py4e.com/api/people/88/
+                      películas:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/2/
+                        - https://swapi.py4e.com/api/films/3/
+                        - https://swapi.py4e.com/api/films/4/
+                        - https://swapi.py4e.com/api/films/5/
+                        - https://swapi.py4e.com/api/films/6/
+                        - https://swapi.py4e.com/api/films/7/
+                      creado: '2014-12-10T13:52:11.567000Z'
+                      editado: '2014-12-20T21:36:42.136000Z'
+                      URL: https://swapi.py4e.com/api/species/1/
+                    - nombre: Droid
+                      clasificación: artificial
+                      designación: sentient
+                      promedio_height: n/a
+                      skin_colors: n/a
+                      Hair_Colors: n/a
+                      Eye_Colors: n/a
+                      promedio_lifespan: indefinite
+                      mundo doméstico: null
+                      lenguaje: n/a
+                      personas:
+                        - https://swapi.py4e.com/api/people/2/
+                        - https://swapi.py4e.com/api/people/3/
+                        - https://swapi.py4e.com/api/people/8/
+                        - https://swapi.py4e.com/api/people/23/
+                        - https://swapi.py4e.com/api/people/87/
+                      películas:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/2/
+                        - https://swapi.py4e.com/api/films/3/
+                        - https://swapi.py4e.com/api/films/4/
+                        - https://swapi.py4e.com/api/films/5/
+                        - https://swapi.py4e.com/api/films/6/
+                        - https://swapi.py4e.com/api/films/7/
+                      creado: '2014-12-10T15:16:16.259000Z'
+                      editado: '2014-12-20T21:36:42.139000Z'
+                      URL: https://swapi.py4e.com/api/species/2/
+                    - nombre: Wookiee
+                      clasificación: mammal
+                      designación: sentient
+                      promedio_height: 210
+                      skin_colors: gray
+                      Hair_Colors: black brown
+                      Eye_Colors: blue green yellow brown golden red
+                      promedio_lifespan: 400
+                      mundo doméstico: https://swapi.py4e.com/api/planets/14/
+                      lenguaje: Shyriiwook
+                      personas:
+                        - https://swapi.py4e.com/api/people/13/
+                        - https://swapi.py4e.com/api/people/80/
+                      películas:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/2/
+                        - https://swapi.py4e.com/api/films/3/
+                        - https://swapi.py4e.com/api/films/6/
+                        - https://swapi.py4e.com/api/films/7/
+                      creado: '2014-12-10T16:44:31.486000Z'
+                      editado: '2014-12-20T21:36:42.142000Z'
+                      URL: https://swapi.py4e.com/api/species/3/
+    obtenerVehicles:
+      description: Obtener Vehicles
+      content:
+        application/json:
+          schema:
+            type: object
+            description: obtener vehicles con cabecera traducida
+            properties:
+              payload:
+                type: object
+                description: objeto vehicles con cabecera traducida
+          examples:
+            Caso-Prueba-01:
+              summary: Caso de exito
+              value:
+                payload:
+                  datos:
+                    - nombre: Sand Crawler
+                      modelo: Digger Crawler
+                      fabricante: Corellia Mining Corporation
+                      cost_in_credits: 150000
+                      longitud: 36.8
+                      max_atmosfering_speed: 30
+                      tripulación: 46
+                      pasajeros: 30
+                      carga_capacidad: 50000
+                      consumibles: 2 months
+                      vehículos_class: wheeled
+                      pilotos: null
+                      películas:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/5/
+                      creado: '2014-12-10T15:36:25.724000Z'
+                      editado: '2014-12-20T21:30:21.661000Z'
+                      URL: https://swapi.py4e.com/api/vehicles/4/
+                    - nombre: T-16 skyhopper
+                      modelo: T-16 skyhopper
+                      fabricante: Incom Corporation
+                      cost_in_credits: 14500
+                      longitud: 10.4
+                      max_atmosfering_speed: 1200
+                      tripulación: 1
+                      pasajeros: 1
+                      carga_capacidad: 50
+                      consumibles: 0
+                      vehículos_class: repulsorcraft
+                      pilotos: null
+                      películas: https://swapi.py4e.com/api/films/1/
+                      creado: '2014-12-10T16:01:52.434000Z'
+                      editado: '2014-12-20T21:30:21.665000Z'
+                      URL: https://swapi.py4e.com/api/vehicles/6/
+                    - nombre: X-34 landspeeder
+                      modelo: X-34 landspeeder
+                      fabricante: SoroSuub Corporation
+                      cost_in_credits: 10550
+                      longitud: 3.4
+                      max_atmosfering_speed: 250
+                      tripulación: 1
+                      pasajeros: 1
+                      carga_capacidad: 5
+                      consumibles: unknown
+                      vehículos_class: repulsorcraft
+                      pilotos: null
+                      películas: https://swapi.py4e.com/api/films/1/
+                      creado: '2014-12-10T16:13:52.586000Z'
+                      editado: '2014-12-20T21:30:21.668000Z'
+                      URL: https://swapi.py4e.com/api/vehicles/7/
+    obtenerStarships:
+      description: Obtener Startships
+      content:
+        application/json:
+          schema:
+            type: object
+            description: obtener starships con cabecera traducida
+            properties:
+              payload:
+                type: object
+                description: objeto starships con cabecera traducida
+          examples:
+            Caso-Prueba-01:
+              summary: Caso de exito
+              value:
+                payload:
+                  datos:
+                    - nombre: CR90 corvette
+                      modelo: Corellian Engineering Corporation
+                      fabricante: 3500000
+                      cost_in_credits: 150
+                      longitud: 950
+                      max_atmosfering_speed: 30-165
+                      tripulación: 600
+                      pasajeros: 3000000
+                      Cargo_Capacity: 1 year
+                      Consumibles: 2
+                      Hyperdrive_Rating: 60
+                      MGLT: corvette
+                      Starship_class: null
+                      pilotos:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/3/
+                        - https://swapi.py4e.com/api/films/6/
+                      películas: '2014-12-10T14:20:33.369000Z'
+                      creado: '2014-12-20T21:23:49.867000Z'
+                      editado: https://swapi.py4e.com/api/starships/2/
+                    - nombre: Imperial I-class Star Destroyer
+                      modelo: Kuat Drive Yards
+                      fabricante: 150000000
+                      cost_in_credits: 1600
+                      longitud: 975
+                      max_atmosfering_speed: 47060
+                      tripulación: n/a
+                      pasajeros: 36000000
+                      Cargo_Capacity: 2 years
+                      Consumibles: 2
+                      Hyperdrive_Rating: 60
+                      MGLT: Star Destroyer
+                      Starship_class: null
+                      pilotos:
+                        - https://swapi.py4e.com/api/films/1/
+                        - https://swapi.py4e.com/api/films/2/
+                        - https://swapi.py4e.com/api/films/3/
+                      películas: '2014-12-10T15:08:19.848000Z'
+                      creado: '2014-12-20T21:23:49.870000Z'
+                      editado: https://swapi.py4e.com/api/starships/3/
+                    - nombre: Sentinel-class landing craft
+                      modelo: Sienar Fleet Systems Cyngus Spaceworks
+                      fabricante: 240000
+                      cost_in_credits: 38
+                      longitud: 1000
+                      max_atmosfering_speed: 5
+                      tripulación: 75
+                      pasajeros: 180000
+                      Cargo_Capacity: 1 month
+                      Consumibles: 1
+                      Hyperdrive_Rating: 70
+                      MGLT: landing craft
+                      Starship_class: null
+                      pilotos: https://swapi.py4e.com/api/films/1/
+                      películas: '2014-12-10T15:48:00.586000Z'
+                      creado: '2014-12-20T21:23:49.873000Z'
+                      editado: https://swapi.py4e.com/api/starships/5/

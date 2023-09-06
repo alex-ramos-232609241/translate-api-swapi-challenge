@@ -1,0 +1,127 @@
+description: Obtener Films
+content:
+  application/json:
+    schema:
+      type: object
+      description: obtener films con cabecera traducida
+      properties:
+        payload:
+          type: object
+          description: objeto films con cabecera traducida
+    
+    examples:
+      Caso-Prueba-01:
+        summary: Caso de exito
+        value:
+          payload:
+            datos:
+              - título: A New Hope
+                episodio_id: 4
+                apertura_crawl: It is a period of civil war.\r\nRebel spaceships striking\r\nfrom a hidden base have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon the DEATH\r\nSTAR an armored space\r\nstation with enough power\r\nto destroy an entire planet.\r\n\r\nPursued by the Empire's\r\nsinister agents Princess\r\nLeia races home aboard her\r\nstarship custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....
+                director: George Lucas
+                productor: Gary Kurtz Rick McCallum
+                lanzamiento_date: 1977-05-25
+                personajes: 
+                  - https://swapi.py4e.com/api/people/1/
+                  - https://swapi.py4e.com/api/people/2/
+                  - https://swapi.py4e.com/api/people/3/
+                  - https://swapi.py4e.com/api/people/4/
+                  - https://swapi.py4e.com/api/people/5/
+                  - https://swapi.py4e.com/api/people/6/
+                  - https://swapi.py4e.com/api/people/7/
+                  - https://swapi.py4e.com/api/people/8/
+                  - https://swapi.py4e.com/api/people/9/
+                  - https://swapi.py4e.com/api/people/10/
+                  - https://swapi.py4e.com/api/people/12/
+                  - https://swapi.py4e.com/api/people/13/
+                  - https://swapi.py4e.com/api/people/14/
+                  - https://swapi.py4e.com/api/people/15/
+                  - https://swapi.py4e.com/api/people/16/
+                  - https://swapi.py4e.com/api/people/18/
+                  - https://swapi.py4e.com/api/people/19/
+                  - https://swapi.py4e.com/api/people/81/
+                planetas: 
+                  - https://swapi.py4e.com/api/planets/1/
+                  - https://swapi.py4e.com/api/planets/2/
+                  - https://swapi.py4e.com/api/planets/3/
+                naves espaciales: 
+                  - https://swapi.py4e.com/api/starships/2/
+                  - https://swapi.py4e.com/api/starships/3/
+                  - https://swapi.py4e.com/api/starships/5/
+                  - https://swapi.py4e.com/api/starships/9/
+                  - https://swapi.py4e.com/api/starships/10/
+                  - https://swapi.py4e.com/api/starships/11/
+                  - https://swapi.py4e.com/api/starships/12/
+                  - https://swapi.py4e.com/api/starships/13/
+                vehículos: 
+                  - https://swapi.py4e.com/api/vehicles/4/
+                  - https://swapi.py4e.com/api/vehicles/6/
+                  - https://swapi.py4e.com/api/vehicles/7/
+                  - https://swapi.py4e.com/api/vehicles/8/
+                especies: 
+                  - https://swapi.py4e.com/api/species/1/
+                  - https://swapi.py4e.com/api/species/2/
+                  - https://swapi.py4e.com/api/species/3/
+                  - https://swapi.py4e.com/api/species/4/
+                  - https://swapi.py4e.com/api/species/5/
+                creado: 2014-12-10T14:23:31.880000Z
+                editado: 2014-12-20T19:49:45.256000Z
+              - título: The Empire Strikes Back
+                episodio_id: 5
+                apertura_crawl: It is a dark time for the\r\nRebellion. Although the Death\r\nStar has been destroyed\r\nImperial troops have driven the\r\nRebel forces from their hidden\r\nbase and pursued them across\r\nthe galaxy.\r\n\r\nEvading the dreaded Imperial\r\nStarfleet a group of freedom\r\nfighters led by Luke Skywalker\r\nhas established a new secret\r\nbase on the remote ice world\r\nof Hoth.\r\n\r\nThe evil lord Darth Vader\r\nobsessed with finding young\r\nSkywalker has dispatched\r\nthousands of remote probes into\r\nthe far reaches of space....
+                director: Irvin Kershner
+                productor: Gary Kurtz Rick McCallum
+                lanzamiento_date: 1980-05-17
+                personajes: 
+                  - https://swapi.py4e.com/api/people/1/
+                  - https://swapi.py4e.com/api/people/2/
+                  - https://swapi.py4e.com/api/people/3/
+                  - https://swapi.py4e.com/api/people/4/
+                  - https://swapi.py4e.com/api/people/5/
+                  - https://swapi.py4e.com/api/people/10/
+                  - https://swapi.py4e.com/api/people/13/
+                  - https://swapi.py4e.com/api/people/14/
+                  - https://swapi.py4e.com/api/people/18/
+                  - https://swapi.py4e.com/api/people/20/
+                  - https://swapi.py4e.com/api/people/21/
+                  - https://swapi.py4e.com/api/people/22/
+                  - https://swapi.py4e.com/api/people/23/
+                  - https://swapi.py4e.com/api/people/24/
+                  - https://swapi.py4e.com/api/people/25/
+                  - https://swapi.py4e.com/api/people/26/
+              
+                planetas: 
+                  - https://swapi.py4e.com/api/planets/4/
+                  - https://swapi.py4e.com/api/planets/5/
+                  - https://swapi.py4e.com/api/planets/6/
+                  - https://swapi.py4e.com/api/planets/27/
+              
+                naves espaciales: 
+                  - https://swapi.py4e.com/api/starships/3/
+                  - https://swapi.py4e.com/api/starships/10/
+                  - https://swapi.py4e.com/api/starships/11/
+                  - https://swapi.py4e.com/api/starships/12/
+                  - https://swapi.py4e.com/api/starships/15/
+                  - https://swapi.py4e.com/api/starships/17/
+                  - https://swapi.py4e.com/api/starships/21/
+                  - https://swapi.py4e.com/api/starships/22/
+                  - https://swapi.py4e.com/api/starships/23/
+              
+                vehículos: 
+                  - https://swapi.py4e.com/api/vehicles/8/
+                  - https://swapi.py4e.com/api/vehicles/14/
+                  - https://swapi.py4e.com/api/vehicles/16/
+                  - https://swapi.py4e.com/api/vehicles/18/
+                  - https://swapi.py4e.com/api/vehicles/19/
+                  - https://swapi.py4e.com/api/vehicles/20/
+              
+                especies: 
+                  - https://swapi.py4e.com/api/species/1/
+                  - https://swapi.py4e.com/api/species/2/
+                  - https://swapi.py4e.com/api/species/3/
+                  - https://swapi.py4e.com/api/species/6/
+                  - https://swapi.py4e.com/api/species/7/
+              
+                creado: 2014-12-12T11:26:24.656000Z
+                editado: 2014-12-15T13:07:53.386000Z
+                URL: https://swapi.py4e.com/api/films/2/

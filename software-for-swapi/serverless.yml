@@ -1,0 +1,110 @@
+service: curso-sls-hola-mundo
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-east-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource:
+        - arn:aws:dynamodb:us-east-1:793282269851:table/TaskTable
+
+plugins:
+  - serverless-offline  
+
+functions:
+  
+  createCallswapi:
+    handler: src/swapicore.createCallswapi
+    events:
+      - http:
+          method: get
+          path: /
+  createCallswapipeople:
+    handler: src/swapicore.createCallswapi
+    events:
+      - http:
+          method: get
+          path: /people/
+  createCallswapiplanets:
+    handler: src/swapicore.createCallswapi
+    events:
+      - http:
+          method: get
+          path: /planets/
+  
+  createCallswapifilms:
+    handler: src/swapicore.createCallswapi
+    events:
+      - http:
+          method: get
+          path: /films/
+
+  createCallswapispecies:
+    handler: src/swapicore.createCallswapi
+    events:
+      - http:
+          method: get
+          path: /species/
+  createCallswapivehicles:
+    handler: src/swapicore.createCallswapi
+    events:
+      - http:
+          method: get
+          path: /vehicles/
+
+  createCallswapistarships:
+    handler: src/swapicore.createCallswapi
+    events:
+      - http:
+          method: get
+          path: /starships/
+
+  createTask:
+    handler: src/tasksDynamo/addTask.addTask
+    events:
+      - httpApi:
+          path: /tasks
+          method: post
+  getTasks:
+    handler: src/tasksDynamo/getTasks.getTasks
+    events:
+      - httpApi:
+          path: /tasks
+          method: get
+  getTask:
+    handler: src/tasksDynamo/getTask.getTask
+    events:
+      - httpApi:
+          path: /tasks/{id}
+          method: get
+  updateTask:
+    handler: src/tasksDynamo/updateTask.updateTask
+    events:
+      - httpApi:
+          path: /tasks/{id}
+          method: put
+  deleteTask:
+    handler: src/tasksDynamo/deleteTask.deleteTask
+    events:
+      - httpApi:
+          path: /tasks/{id}
+          method: delete
+
+resources:
+  Resources:
+    TaskTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: TaskTable
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH                         

@@ -1,0 +1,13 @@
+{
+  "name": "software-for-swapi-dsg",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "openapi preview-docs --port 8000 dist/openapi.yaml",
+    "build": "openapi bundle -o dist/openapi.yaml"
+  },
+  "author": "Alex Ramos Ipanaque",
+  "license": "MIT",
+  "dependencies": {
+    "@redocly/openapi-cli": "^1.0.0-beta.95"
+  }
+}

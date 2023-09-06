@@ -1,0 +1,23 @@
+openapi: 3.0.1
+info:
+  title: Traductor Swapi DSG
+  contact:
+    name: Alex Ramos Ipanaque
+tags:
+  - name: TRANSLATE SWAPI
+    description: Rutas para obtener la api swapi traducida.
+  - name: CONECCTION OF DYNAMODB
+    description: Rutas para obtener acceso a dynamoDb   
+paths:
+  /dev/people/:
+    $ref: 'paths/people.yaml'
+  /dev/planets/:
+    $ref: 'paths/planets.yaml'
+  /dev/films/:
+    $ref: 'paths/films.yaml'
+  /dev/species/:
+    $ref: 'paths/species.yaml'
+  /dev/vehicles/:
+    $ref: 'paths/vehicles.yaml'
+  /dev/starships/:
+    $ref: 'paths/starships.yaml'  

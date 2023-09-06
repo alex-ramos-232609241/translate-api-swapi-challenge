@@ -1,0 +1,12 @@
+parameters:
+  - name: dateTime
+
+get:
+  tags:
+    - TRANSLATE SWAPI
+  summary: Listar films con cabecera traducida.
+  description: Endpoint te permite listar las films con cabecera en español.
+  responses:
+    '200':
+      $ref: ../components/responses/obtenerFilms.yaml  
+   
